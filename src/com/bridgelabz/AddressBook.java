@@ -63,35 +63,7 @@ public class AddressBook {
 		return Zip;
 	}
 static ArrayList<AddressBook> nums=new ArrayList<AddressBook>();
-		public static void main(String[]args) {
-			menu();
-		}
-		public static void menu() 
-		{
-			
-			    Scanner sc=new Scanner(System.in);
-				System.out.println("-----------------MENU---------------------");
-				System.out.println("1.Insert");
-				System.out.println("2.Edit");
-				System.out.println("3.Delete");
-				System.out.println("4.Display");
-				System.out.println("5.exit");
-				System.out.println("Enter your choice");
-				int choice =sc.nextInt();
-				switch(choice)
-				{
-				case 1:
-					Insert();
-				case 2:
-					Edit();
-				case 3:
-					Delete();
-				case 4:
-					Display();
-				default:
-					System.exit(0);
-				}	
-			}
+		
 		public static void Insert()
 		{
 			Scanner sc = new Scanner(System.in);
@@ -172,6 +144,7 @@ static ArrayList<AddressBook> nums=new ArrayList<AddressBook>();
 			          break;
 			       }	    	   
 			    }
+			    System.out.println("Deleted");
 			    Display();
 				menu();
 		    }
@@ -192,6 +165,39 @@ static ArrayList<AddressBook> nums=new ArrayList<AddressBook>();
 			    }
 				menu();
 			}
+		    public static void main(String[]args) {
+				menu();
+			}
+			public static void menu() 
+			{
+				
+				    Scanner sc=new Scanner(System.in);
+					System.out.println("-----------------MENU---------------------");
+					System.out.println("Enter (1) to Insert (2) to Edit (3) to Delete (4) to Display (5) to exit");
+					System.out.println("Enter your choice");
+					int cho =sc.nextInt();
+					switch(cho)
+					{
+					case 1:
+						System.out.println("Insert");
+						Insert();
+						break;
+					case 2:
+						System.out.println("Edit/Update");
+						Edit();
+						break;
+					case 3:
+						System.out.println("Delete");
+						Delete();
+						break;
+					case 4:
+						System.out.println("Display");
+						Display();
+						break;
+					default:
+						System.exit(0);
+					}	
+				}
 	}
 
 
